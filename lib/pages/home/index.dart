@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
-import 'package:getx_quick_start/pages/list_detail/index_view.dart';
+import 'package:getx_quick_start/pages/list_detail/index.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);

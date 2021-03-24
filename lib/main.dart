@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
 
+import 'common/utils/logger.dart';
+
 void main() {
   runApp(MyApp());
 
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // enableLog: true,
-      // logWriterCallback: Logger.write,
+      enableLog: true,
+      logWriterCallback: Logger.write,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       unknownRoute: AppPages.unknownRoute,

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
 
-class NotfoundView extends StatelessWidget {
-  const NotfoundView({Key? key}) : super(key: key);
+class LoginView extends StatelessWidget {
+  const LoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("路由没有找到"),
+        title: Text("登录"),
       ),
       body: ListTile(
         title: Text("返回首页"),
