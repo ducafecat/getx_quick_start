@@ -1,10 +1,26 @@
 # getx_quick_start
 
-getx 特性研究
+## 前言
 
-https://pub.flutter-io.cn/packages/get
+这个仓库只是对 getx 功能就行整理和研究，实战中的项目代码架构不在这里实现（可能用 getx 重写一版去年新闻客户端 APP）。
 
-## 关闭 null-safety
+- 官仓
+  https://pub.flutter-io.cn/packages/get
+
+![](../2021-03-24-17-37-06.png)
+
+## 开发环境
+
+```
+Flutter 2.1.0-12.1.pre • channel dev • https://github.com/flutter/flutter.git
+Framework • revision 8264cb3e8a (2 weeks ago) • 2021-03-10 12:37:57 -0800
+Engine • revision 711ab3fda0
+Tools • Dart 2.13.0 (build 2.13.0-116.0.dev)
+```
+
+## 遇到的问题
+
+### 关闭 null-safety
 
 很多第三方包还没有 `null-safety`
 
@@ -25,7 +41,7 @@ https://pub.flutter-io.cn/packages/get
 }
 ```
 
-## 空值检查 unnecessary_non_null_assertion
+### 空值检查 unnecessary_non_null_assertion
 
 https://dart.dev/tools/diagnostic-messages#unnecessary_non_null_assertion
 

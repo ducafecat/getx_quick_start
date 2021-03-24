@@ -18,6 +18,7 @@ class AppPages {
       name: AppRoutes.Login,
       page: () => LoginView(),
     ),
+
     // 需要认证
     GetPage(
       name: AppRoutes.Home,
