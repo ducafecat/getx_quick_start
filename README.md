@@ -7,7 +7,7 @@
 - 官仓
   https://pub.flutter-io.cn/packages/get
 
-![](../2021-03-24-17-37-06.png)
+![](./README/2021-03-24-17-37-06.png)
 
 ## 开发环境
 
