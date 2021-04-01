@@ -14,18 +14,22 @@ class StateObxView extends StatelessWidget {
       appBar: AppBar(
         title: Text("Obx(...)"),
       ),
-      body: Column(
-        children: [
-          Center(
-            child: Obx(() => Text("count -> " + count.toString())),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              count.value++;
-            },
-            child: Text('add'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            Obx(() => Text("count1 -> " + count.toString())),
+            Obx(() => Text("count2 -> " + count.toString())),
+
+            //
+            Divider(),
+            ElevatedButton(
+              onPressed: () {
+                count.value++;
+              },
+              child: Text('add'),
+            ),
+          ],
+        ),
       ),
     );
   }

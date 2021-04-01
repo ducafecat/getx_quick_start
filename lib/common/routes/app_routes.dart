@@ -11,5 +11,6 @@ abstract class AppRoutes {
 
   static const State = '/obx';
   static const Obx = '/obx';
-  static const ValueBuilder = '/ValueBuilder';
+  static const ValueBuilder = '/valueBuilder';
+  static const Getx = '/getx';
 }

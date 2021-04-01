@@ -7,6 +7,7 @@ import 'package:getx_quick_start/pages/list/index.dart';
 import 'package:getx_quick_start/pages/login/index.dart';
 import 'package:getx_quick_start/pages/my/index.dart';
 import 'package:getx_quick_start/pages/notfound/index.dart';
+import 'package:getx_quick_start/pages/state_getx/index.dart';
 import 'package:getx_quick_start/pages/state_obx/index.dart';
 import 'package:getx_quick_start/pages/state_valueBuilder/index.dart';
 
@@ -37,6 +38,7 @@ class AppPages {
       GetPage(name: AppRoutes.Obx, page: () => StateObxView()),
       GetPage(
           name: AppRoutes.ValueBuilder, page: () => StateValueBuilderView()),
+      GetPage(name: AppRoutes.Getx, page: () => StateGetxView()),
     ]),
 
     // 其它
