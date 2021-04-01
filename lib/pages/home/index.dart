@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
+import 'package:getx_quick_start/common/routes/app_pages.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 
 class HomeView extends StatelessWidget {
@@ -66,6 +67,11 @@ class HomeView extends StatelessWidget {
             subtitle: Text('Get.toNamed("/aaa/bbb/ccc")'),
             onTap: () => Get.toNamed("/aaa/bbb/ccc"),
           ),
+          ListTile(
+            title: Text("导航-中间件-认证Auth"),
+            subtitle: Text('Get.toNamed(AppRoutes.My)'),
+            onTap: () => Get.toNamed(AppRoutes.My),
+          ),
           Divider(),
 
           // 组件
@@ -111,8 +117,26 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
+          Divider(),
 
-          //
+          // state 状态
+          ListTile(
+            title: Text("State-Obx"),
+            subtitle: Text('Get.toNamed(AppRoutes.Obx)'),
+            onTap: () => Get.toNamed(AppRoutes.Obx),
+          ),
+          ListTile(
+            title: Text("State-ValueBuilder"),
+            subtitle: Text('Get.toNamed(AppRoutes.ValueBuilder)'),
+            onTap: () => Get.toNamed(AppRoutes.State + AppRoutes.ValueBuilder),
+          ),
+          Divider(),
+
+          // 多语言
+
+          // 样式
+
+          // GetxService
         ],
       ),
     );

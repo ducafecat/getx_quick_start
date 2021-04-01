@@ -5,7 +5,10 @@ import 'package:getx_quick_start/pages/home/index.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 import 'package:getx_quick_start/pages/list/index.dart';
 import 'package:getx_quick_start/pages/login/index.dart';
+import 'package:getx_quick_start/pages/my/index.dart';
 import 'package:getx_quick_start/pages/notfound/index.dart';
+import 'package:getx_quick_start/pages/state_obx/index.dart';
+import 'package:getx_quick_start/pages/state_valueBuilder/index.dart';
 
 part 'app_routes.dart';
 
@@ -19,13 +22,27 @@ class AppPages {
       page: () => LoginView(),
     ),
 
-    // 需要认证
+    // 我的，需要认证
+    GetPage(
+      name: AppRoutes.My,
+      page: () => MyView(),
+      middlewares: [
+        RouteAuthMiddleware(priority: 1),
+      ],
+    ),
+
+    // 状态
+    // ValueBuilder
+    GetPage(name: AppRoutes.State, page: () => HomeView(), children: [
+      GetPage(name: AppRoutes.Obx, page: () => StateObxView()),
+      GetPage(
+          name: AppRoutes.ValueBuilder, page: () => StateValueBuilderView()),
+    ]),
+
+    // 其它
     GetPage(
       name: AppRoutes.Home,
       page: () => HomeView(),
-      // middlewares: [
-      //   RouteAuthMiddleware(priority: 1),
-      // ],
       // binding: HomeBinding(),
       children: [
         GetPage(
