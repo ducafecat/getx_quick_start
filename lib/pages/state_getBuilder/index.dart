@@ -4,13 +4,13 @@ import 'package:get/get.dart';
 import './controller.dart';
 
 /*
- * GetX 局部自动控制
+ * GetBuilder 手动控制
  * controller -> update
 */
 
 // ignore: must_be_immutable
-class StateGetxView extends StatelessWidget {
-  StateGetxView({Key? key}) : super(key: key);
+class StateGetBuilderView extends StatelessWidget {
+  StateGetBuilderView({Key? key}) : super(key: key);
 
   var controller = CountController();
 
@@ -18,35 +18,35 @@ class StateGetxView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Getx"),
+        title: Text("GetBuilder"),
       ),
       body: Center(
         child: Column(
           children: [
-            GetX<CountController>(
+            GetBuilder<CountController>(
               init: controller,
               initState: (_) {},
               builder: (_) {
-                print("GetX - 1");
+                print("GetBuilder - 1");
                 return Text('value -> ${_.count}');
               },
             ),
-            GetX<CountController>(
+            GetBuilder<CountController>(
               init: controller,
               initState: (_) {},
               builder: (_) {
-                print("GetX - 2");
+                print("GetBuilder - 2");
                 return Text('value -> ${_.count}');
               },
             ),
             Divider(),
 
             //
-            GetX<CountController>(
+            GetBuilder<CountController>(
               init: controller,
               initState: (_) {},
               builder: (_) {
-                print("GetX - 3");
+                print("GetBuilder - 3");
                 return Column(
                   children: [
                     Text('value -> ${_.count}'),
@@ -54,7 +54,7 @@ class StateGetxView extends StatelessWidget {
                       onPressed: () {
                         _.add();
                       },
-                      child: Text('GetX -> add'),
+                      child: Text('GetBuilder -> add'),
                     )
                   ],
                 );
@@ -63,12 +63,24 @@ class StateGetxView extends StatelessWidget {
             Divider(),
 
             // count2
-            GetX<CountController>(
+            GetBuilder<CountController>(
               init: controller,
               initState: (_) {},
               builder: (_) {
-                print("GetX - 4");
-                return Text('value -> ${_.count2}');
+                print("GetBuilder - 4");
+                return Text('value count2 -> ${_.count2}');
+              },
+            ),
+            Divider(),
+
+            // id2
+            GetBuilder<CountController>(
+              id: "id2",
+              init: controller,
+              initState: (_) {},
+              builder: (_) {
+                print("GetBuilder - 4");
+                return Text('id2 -> value count2 -> ${_.count2}');
               },
             ),
             Divider(),
@@ -85,7 +97,21 @@ class StateGetxView extends StatelessWidget {
               onPressed: () {
                 controller.add2();
               },
-              child: Text('add2 + update'),
+              child: Text('add2'),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                controller.update();
+              },
+              child: Text('controller.update()'),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                controller.update(["id2"]);
+              },
+              child: Text('controller.update(id2)'),
             ),
           ],
         ),

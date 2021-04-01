@@ -131,6 +131,11 @@ class HomeView extends StatelessWidget {
             onTap: () => Get.toNamed(AppRoutes.State + AppRoutes.Getx),
           ),
           ListTile(
+            title: Text("State-GetBuilder"),
+            subtitle: Text('Get.toNamed(AppRoutes.GetBuilder)'),
+            onTap: () => Get.toNamed(AppRoutes.State + AppRoutes.GetBuilder),
+          ),
+          ListTile(
             title: Text("State-ValueBuilder"),
             subtitle: Text('Get.toNamed(AppRoutes.ValueBuilder)'),
             onTap: () => Get.toNamed(AppRoutes.State + AppRoutes.ValueBuilder),
