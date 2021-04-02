@@ -14,4 +14,5 @@ abstract class AppRoutes {
   static const ValueBuilder = '/valueBuilder';
   static const Getx = '/getx';
   static const GetBuilder = '/getBuilder';
+  static const Workers = '/workers';
 }

@@ -140,6 +140,11 @@ class HomeView extends StatelessWidget {
             subtitle: Text('Get.toNamed(AppRoutes.ValueBuilder)'),
             onTap: () => Get.toNamed(AppRoutes.State + AppRoutes.ValueBuilder),
           ),
+          ListTile(
+            title: Text("State-Workers"),
+            subtitle: Text('Get.toNamed(AppRoutes.Workers)'),
+            onTap: () => Get.toNamed(AppRoutes.State + AppRoutes.Workers),
+          ),
           Divider(),
 
           // 多语言

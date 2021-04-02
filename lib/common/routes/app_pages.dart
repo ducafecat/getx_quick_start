@@ -11,6 +11,7 @@ import 'package:getx_quick_start/pages/state_getBuilder/index.dart';
 import 'package:getx_quick_start/pages/state_getx/index.dart';
 import 'package:getx_quick_start/pages/state_obx/index.dart';
 import 'package:getx_quick_start/pages/state_valueBuilder/index.dart';
+import 'package:getx_quick_start/pages/state_workers/index.dart';
 
 part 'app_routes.dart';
 
@@ -41,6 +42,7 @@ class AppPages {
           name: AppRoutes.ValueBuilder, page: () => StateValueBuilderView()),
       GetPage(name: AppRoutes.Getx, page: () => StateGetxView()),
       GetPage(name: AppRoutes.GetBuilder, page: () => StateGetBuilderView()),
+      GetPage(name: AppRoutes.Workers, page: () => StateWorkersView()),
     ]),
 
     // 其它
