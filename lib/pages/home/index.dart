@@ -147,6 +147,20 @@ class HomeView extends StatelessWidget {
           ),
           Divider(),
 
+          // 依赖注入
+          ListTile(
+            title: Text("Dependency-Put-Find"),
+            subtitle: Text('Get.toNamed(AppRoutes.DependencyPutFind)'),
+            onTap: () =>
+                Get.toNamed(AppRoutes.Dependency + AppRoutes.DependencyPutFind),
+          ),
+          ListTile(
+            title: Text("Dependency-LazyPut"),
+            subtitle: Text('Get.toNamed(AppRoutes.DependencyLazyPut)'),
+            onTap: () =>
+                Get.toNamed(AppRoutes.Dependency + AppRoutes.DependencyLazyPut),
+          ),
+
           // 多语言
 
           // 样式

@@ -1,6 +1,9 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/middleware/router_auth.dart';
+import 'package:getx_quick_start/pages/dependency_lazyPut/bindings.dart';
+import 'package:getx_quick_start/pages/dependency_lazyPut/index.dart';
+import 'package:getx_quick_start/pages/dependency_put_find/index.dart';
 import 'package:getx_quick_start/pages/home/index.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 import 'package:getx_quick_start/pages/list/index.dart';
@@ -36,7 +39,7 @@ class AppPages {
 
     // 状态
     // ValueBuilder
-    GetPage(name: AppRoutes.State, page: () => HomeView(), children: [
+    GetPage(name: AppRoutes.State, page: () => StateObxView(), children: [
       GetPage(name: AppRoutes.Obx, page: () => StateObxView()),
       GetPage(
           name: AppRoutes.ValueBuilder, page: () => StateValueBuilderView()),
@@ -44,6 +47,20 @@ class AppPages {
       GetPage(name: AppRoutes.GetBuilder, page: () => StateGetBuilderView()),
       GetPage(name: AppRoutes.Workers, page: () => StateWorkersView()),
     ]),
+
+    // 控制器依赖注入
+    GetPage(
+        name: AppRoutes.Dependency,
+        page: () => StateDependencyPutFindView(),
+        children: [
+          GetPage(
+              name: AppRoutes.DependencyPutFind,
+              page: () => StateDependencyPutFindView()),
+          GetPage(
+              name: AppRoutes.DependencyLazyPut,
+              binding: DependencyLazyPutBinding(),
+              page: () => StateDependencyLazyPutView()),
+        ]),
 
     // 其它
     GetPage(
