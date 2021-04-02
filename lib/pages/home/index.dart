@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
+import 'package:getx_quick_start/common/services/global_config.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 
 class HomeView extends StatelessWidget {
@@ -15,6 +16,14 @@ class HomeView extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          // Service Global Config
+          ListTile(
+            title: Text("Service Global Config"),
+            subtitle: Text(
+                "channel : " + Get.find<GlobalConfigService>().channel.value),
+          ),
+          Divider(),
+
           // 导航
           ListTile(
             title: Text("导航-命名路由-自动层级"),

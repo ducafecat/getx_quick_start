@@ -77,3 +77,8 @@ val == null
           );
   }
 ```
+
+## 参考
+
+- [getx_pattern](https://kauemurakami.github.io/getx_pattern/)
+- [GetX Snippets](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)
