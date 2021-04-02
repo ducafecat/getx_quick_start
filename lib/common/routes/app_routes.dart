@@ -19,4 +19,6 @@ abstract class AppRoutes {
   static const Dependency = '/dependency';
   static const DependencyPutFind = '/dependency_put_find';
   static const DependencyLazyPut = '/dependency_lazy_put';
+
+  static const Service = '/service';
 }

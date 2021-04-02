@@ -10,6 +10,7 @@ import 'package:getx_quick_start/pages/list/index.dart';
 import 'package:getx_quick_start/pages/login/index.dart';
 import 'package:getx_quick_start/pages/my/index.dart';
 import 'package:getx_quick_start/pages/notfound/index.dart';
+import 'package:getx_quick_start/pages/service_view/index.dart';
 import 'package:getx_quick_start/pages/state_getBuilder/index.dart';
 import 'package:getx_quick_start/pages/state_getx/index.dart';
 import 'package:getx_quick_start/pages/state_obx/index.dart';
@@ -61,6 +62,9 @@ class AppPages {
               binding: DependencyLazyPutBinding(),
               page: () => StateDependencyLazyPutView()),
         ]),
+
+    // Service
+    GetPage(name: AppRoutes.Service, page: () => ServiceView()),
 
     // 其它
     GetPage(
