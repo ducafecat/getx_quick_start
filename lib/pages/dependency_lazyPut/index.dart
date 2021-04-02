@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 import './controller.dart';
-import './next_page.dart';
+import 'next_getview_page.dart';
 
 // ignore: must_be_immutable
 class StateDependencyLazyPutView extends StatelessWidget {
@@ -17,13 +17,13 @@ class StateDependencyLazyPutView extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            // GetX<CountController>(
-            //   init: Get.find<CountController>(),
-            //   initState: (_) {},
-            //   builder: (_) {
-            //     return Text('value -> ${_.count}');
-            //   },
-            // ),
+            GetX<CountController>(
+              init: Get.find<CountController>(),
+              initState: (_) {},
+              builder: (_) {
+                return Text('value -> ${_.count}');
+              },
+            ),
             Divider(),
 
             // 按钮
@@ -39,7 +39,7 @@ class StateDependencyLazyPutView extends StatelessWidget {
               onPressed: () {
                 Get.to(NextPageView());
               },
-              child: Text('next page'),
+              child: Text('Next GetView Page'),
             ),
           ],
         ),
