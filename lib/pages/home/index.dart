@@ -17,9 +17,14 @@ class HomeView extends StatelessWidget {
         children: [
           // 导航
           ListTile(
-            title: Text("导航-命名路由-自动层级"),
+            title: Text("导航-命名路由 home > list"),
             subtitle: Text('Get.toNamed("/home/list")'),
             onTap: () => Get.toNamed("/home/list"),
+          ),
+          ListTile(
+            title: Text("导航-命名路由 home > list > detail"),
+            subtitle: Text('Get.toNamed("/home/list/detail")'),
+            onTap: () => Get.toNamed("/home/list/detail"),
           ),
           ListTile(
             title: Text("导航-类对象"),
