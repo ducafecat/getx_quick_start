@@ -4,6 +4,8 @@ import 'package:getx_quick_start/common/middleware/router_auth.dart';
 import 'package:getx_quick_start/pages/dependency_lazyPut/bindings.dart';
 import 'package:getx_quick_start/pages/dependency_lazyPut/index.dart';
 import 'package:getx_quick_start/pages/dependency_put_find/index.dart';
+import 'package:getx_quick_start/pages/getConnect_view/bindings.dart';
+import 'package:getx_quick_start/pages/getConnect_view/view.dart';
 import 'package:getx_quick_start/pages/home/index.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 import 'package:getx_quick_start/pages/list/index.dart';
@@ -65,6 +67,13 @@ class AppPages {
 
     // Service
     GetPage(name: AppRoutes.Service, page: () => ServiceView()),
+
+    // GetConnect
+    GetPage(
+      name: AppRoutes.GetConnect,
+      binding: NewsBinding(),
+      page: () => NewsView(),
+    ),
 
     // 其它
     GetPage(

@@ -21,4 +21,6 @@ abstract class AppRoutes {
   static const DependencyLazyPut = '/dependency_lazy_put';
 
   static const Service = '/service';
+
+  static const GetConnect = '/get_connect';
 }

@@ -170,6 +170,14 @@ class HomeView extends StatelessWidget {
           ),
           Divider(),
 
+          // GetConnect
+          ListTile(
+            title: Text("GetConnect"),
+            subtitle: Text('Get.toNamed(AppRoutes.GetConnect)'),
+            onTap: () => Get.toNamed(AppRoutes.GetConnect),
+          ),
+          Divider(),
+
           // 多语言
 
           // 样式
