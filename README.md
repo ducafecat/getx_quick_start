@@ -21,12 +21,9 @@ https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets
 
 ## 开发环境
 
-```
-Flutter 2.1.0-12.1.pre • channel dev • https://github.com/flutter/flutter.git
-Framework • revision 8264cb3e8a (2 weeks ago) • 2021-03-10 12:37:57 -0800
-Engine • revision 711ab3fda0
-Tools • Dart 2.13.0 (build 2.13.0-116.0.dev)
-```
+- Flutter 2.1.0-12.1.pre
+- Dart 2.13.0
+- get: ^3.26.0
 
 ## 遇到的问题
 
