@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/entity/news.dart';
 import 'controller.dart';
@@ -8,6 +8,23 @@ import 'controller.dart';
 class NewsView extends GetView<NewsController> {
   NewsView({Key? key}) : super(key: key);
 
+  _buildItem(NewsPageListResponseEntity? state) {
+    return ListView.separated(
+      itemCount: state != null ? state.items.length : 0,
+      itemBuilder: (context, index) {
+        final NewsItem item = state!.items[index];
+        return ListTile(
+          onTap: () => null,
+          title: Text(item.title),
+          trailing: Text("分类 ${item.category}"),
+        );
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return Divider();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,23 +32,7 @@ class NewsView extends GetView<NewsController> {
         title: Text("GetConnect Page"),
       ),
       body: controller.obx(
-        // (state) {
-        //   return Container();
-        // },
-        (state) => ListView.separated(
-          itemCount: state.items.length,
-          itemBuilder: (context, index) {
-            final NewsItem item = state.items[index];
-            return ListTile(
-              onTap: () => null,
-              title: Text(item.title),
-              trailing: Text("分类 ${item.category}"),
-            );
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return Divider();
-          },
-        ),
+        (state) => _buildItem(state),
         onEmpty: Text("onEmpty"),
         onLoading: Center(
           child: Column(
@@ -46,7 +47,7 @@ class NewsView extends GetView<NewsController> {
             ],
           ),
         ),
-        onError: (err) => Text("onEmpty" + err),
+        onError: (err) => Text("onEmpty" + err.toString()),
       ),
     );
   }

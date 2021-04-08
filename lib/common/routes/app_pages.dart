@@ -1,4 +1,3 @@
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/middleware/router_auth.dart';
 import 'package:getx_quick_start/pages/dependency_lazyPut/bindings.dart';
@@ -26,7 +25,7 @@ part 'app_routes.dart';
 class AppPages {
   static const INITIAL = AppRoutes.Home;
 
-  static final routes = [
+  static final List<GetPage> routes = [
     // 白名单
     GetPage(
       name: AppRoutes.Login,
@@ -113,4 +112,21 @@ class AppPages {
     name: AppRoutes.NotFound,
     page: () => NotfoundView(),
   );
+
+  // 查询动态路由
+  // static GetPageRoute? getPageRouteByName(
+  //     List<GetPage> pageRoutes, RouteSettings settings) {
+  //   for (var item in pageRoutes) {
+  //     if (item.name.compareTo(settings.name!) == 0) {
+  //       return GetPageRoute(
+  //         settings: settings,
+  //         page: item.page,
+  //         transition: item.transition,
+  //       );
+  //     }
+  //     if (item.children.length > 0) {
+  //       return getPageRouteByName(item.children, settings);
+  //     }
+  //   }
+  // }
 }

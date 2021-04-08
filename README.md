@@ -4,6 +4,8 @@
 
 这个仓库只是对 getx 功能就行整理和研究，实战中的项目代码架构不在这里实现（可能用 getx 重写一版去年新闻客户端 APP）。
 
+## 全面启用 Getx4 + null-safety 空安全
+
 ## 研究重点
 
 1. 功能覆盖
@@ -23,59 +25,10 @@ https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets
 
 - Flutter 2.1.0-12.1.pre
 - Dart 2.13.0
-- get: ^3.26.0
-
-## 遇到的问题
-
-### 关闭 null-safety
-
-很多第三方包还没有 `null-safety`
-
-.vscode/launch.json
-
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "getx_quick_start",
-      "request": "launch",
-      "type": "dart",
-      "program": "lib/main.dart",
-      "args": ["--no-sound-null-safety"]
-    }
-  ]
-}
-```
-
-### 空值检查 unnecessary_non_null_assertion
-
-https://dart.dev/tools/diagnostic-messages#unnecessary_non_null_assertion
-
-原来
-
-```dart
-...
-val == null
-        ? Container()
-        : ListTile(
-            title: Text("传值 id = " + val["id"].toString()),
-          ),
-```
-
-现在
-
-```dart
-  _buildBackListTileRow(Map? val) {
-    return val == null
-        ? Container()
-        : ListTile(
-            title: Text("传值 id = " + val["id"].toString()),
-          );
-  }
-```
+- get: ^4.1.3
 
 ## 参考
 
+- [Sound null safety](https://dart.dev/null-safety)
 - [getx_pattern](https://kauemurakami.github.io/getx_pattern/)
 - [GetX Snippets](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)

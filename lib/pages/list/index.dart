@@ -9,6 +9,11 @@ class ListIndexView extends StatelessWidget {
       appBar: AppBar(
         title: Text("列表页"),
       ),
+      body: Center(
+        child: Container(
+          child: Text("列表页"),
+        ),
+      ),
     );
   }
 }

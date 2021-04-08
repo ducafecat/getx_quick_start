@@ -1,4 +1,3 @@
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 
 class BaseProvider extends GetConnect {
@@ -7,7 +6,7 @@ class BaseProvider extends GetConnect {
     httpClient.baseUrl = 'https://yapi.ducafecat.tech/mock/11';
 
     // 请求拦截
-    httpClient.addRequestModifier((request) {
+    httpClient.addRequestModifier<void>((request) {
       request.headers['Authorization'] = '12345678';
       return request;
     });

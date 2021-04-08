@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
 
 class RouteAuthMiddleware extends GetMiddleware {
   @override
-  int priority = 0;
+  int? priority = 0;
 
   RouteAuthMiddleware({required this.priority});
 
   @override
-  RouteSettings? redirect(String route) {
+  RouteSettings? redirect(String? route) {
     // 加入 AuthService
     Future.delayed(Duration(seconds: 1), () => Get.snackbar("提示", "请先登录APP"));
 

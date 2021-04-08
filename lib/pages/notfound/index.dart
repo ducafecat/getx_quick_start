@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
 

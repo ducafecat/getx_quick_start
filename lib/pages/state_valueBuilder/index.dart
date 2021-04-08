@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+
 import 'package:get/get.dart';
 
 /*
-
   ValueBuilder 更像个小型的 StatefulWidget
   通过 updateFn 来更新数据
-
 */
+
+typedef ValueBuilderUpdateCallback<T> = void Function(T snapshot);
 
 // ignore: must_be_immutable
 class StateValueBuilderView extends StatelessWidget {
   StateValueBuilderView({Key? key}) : super(key: key);
 
-  var count = 0;
+  int count = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class StateValueBuilderView extends StatelessWidget {
       body: Column(
         children: [
           Center(
-            child: ValueBuilder<int>(
+            child: ValueBuilder<int?>(
               initialValue: count,
               builder: (value, updateFn) {
                 return Column(
@@ -32,7 +32,7 @@ class StateValueBuilderView extends StatelessWidget {
                     Text("count -> " + value.toString()),
                     ElevatedButton(
                       onPressed: () {
-                        updateFn(value + 1);
+                        updateFn(value! + 1);
                       },
                       child: Text('ValueBuilder -> add'),
                     )

@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
+
+  _showSnackbar(Map? result) {
+    if (result != null) {
+      Get.snackbar("返回值", "success -> " + result["success"].toString());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +54,7 @@ class HomeView extends StatelessWidget {
             onTap: () async {
               var result = await Get.toNamed("/home/list/detail",
                   arguments: {"id": 999});
-              Get.snackbar("返回值", "success -> " + result["success"].toString());
+              _showSnackbar(result);
             },
           ),
           ListTile(
@@ -56,7 +62,7 @@ class HomeView extends StatelessWidget {
             subtitle: Text('Get.toNamed("/home/list/detail?id=666")'),
             onTap: () async {
               var result = await Get.toNamed("/home/list/detail?id=666");
-              Get.snackbar("返回值", "success -> " + result["success"].toString());
+              _showSnackbar(result);
             },
           ),
           ListTile(
@@ -64,7 +70,7 @@ class HomeView extends StatelessWidget {
             subtitle: Text('Get.toNamed("/home/list/detail/777")'),
             onTap: () async {
               var result = await Get.toNamed("/home/list/detail/777");
-              Get.snackbar("返回值", "success -> " + result["success"].toString());
+              _showSnackbar(result);
             },
           ),
           ListTile(

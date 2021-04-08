@@ -8,8 +8,7 @@
       "name": "getx_quick_start",
       "request": "launch",
       "type": "dart",
-      "program": "lib/main.dart",
-      "args": ["--no-sound-null-safety"]
+      "program": "lib/main.dart"
     }
   ]
 }
