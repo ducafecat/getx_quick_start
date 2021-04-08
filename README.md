@@ -1,10 +1,8 @@
-# getx_quick_start
+# getx_quick_start 全面启用 Getx4 + null-safety 空安全
 
 ## 前言
 
 这个仓库只是对 getx 功能就行整理和研究，实战中的项目代码架构不在这里实现（可能用 getx 重写一版去年新闻客户端 APP）。
-
-## 全面启用 Getx4 + null-safety 空安全
 
 ## 研究重点
 
