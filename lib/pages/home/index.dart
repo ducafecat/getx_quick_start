@@ -79,6 +79,14 @@ class HomeView extends StatelessWidget {
           ),
           Divider(),
 
+          // 嵌套导航
+          ListTile(
+            title: Text("嵌套导航"),
+            subtitle: Text('Get.toNamed(AppRoutes.NestedNavigator)'),
+            onTap: () => Get.toNamed(AppRoutes.NestedNavigator),
+          ),
+          Divider(),
+
           // 组件
           ListTile(
             title: Text("组件-snackbar"),

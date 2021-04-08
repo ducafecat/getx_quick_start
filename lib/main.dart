@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
+import 'package:getx_quick_start/common/lang/translation_service.dart';
 import 'package:getx_quick_start/common/routes/app_pages.dart';
 import 'package:getx_quick_start/common/services/global_config.dart';
 
@@ -33,6 +34,9 @@ class MyApp extends StatelessWidget {
       // locale: TranslationService.locale,
       // fallbackLocale: TranslationService.fallbackLocale,
       // translations: TranslationService(),
+      locale: TranslationService.locale,
+      fallbackLocale: TranslationService.fallbackLocale,
+      translations: TranslationService(),
     );
   }
 }

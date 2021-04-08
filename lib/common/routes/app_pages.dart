@@ -11,6 +11,8 @@ import 'package:getx_quick_start/pages/list_detail/index.dart';
 import 'package:getx_quick_start/pages/list/index.dart';
 import 'package:getx_quick_start/pages/login/index.dart';
 import 'package:getx_quick_start/pages/my/index.dart';
+import 'package:getx_quick_start/pages/nested_navigation/binding.dart';
+import 'package:getx_quick_start/pages/nested_navigation/index.dart';
 import 'package:getx_quick_start/pages/notfound/index.dart';
 import 'package:getx_quick_start/pages/service_view/index.dart';
 import 'package:getx_quick_start/pages/state_getBuilder/index.dart';
@@ -75,6 +77,13 @@ class AppPages {
       page: () => NewsView(),
     ),
 
+    // 嵌套导航
+    GetPage(
+      name: AppRoutes.NestedNavigator,
+      page: () => NestedNavView(),
+      binding: NestedBinding(),
+    ),
+
     // 其它
     GetPage(
       name: AppRoutes.Home,
@@ -83,7 +92,7 @@ class AppPages {
       children: [
         GetPage(
           name: AppRoutes.List,
-          page: () => ListView(),
+          page: () => ListIndexView(),
           children: [
             GetPage(
               name: AppRoutes.Detail,
