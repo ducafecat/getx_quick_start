@@ -1,4 +1,6 @@
-# getx_quick_start 全面启用 Getx4 + null-safety 空安全
+# getx_quick_start
+
+## 全面启用 Getx4 + null-safety 空安全
 
 ## 前言
 
