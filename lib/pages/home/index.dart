@@ -198,8 +198,20 @@ class HomeView extends StatelessWidget {
           Divider(),
 
           // 多语言
+          ListTile(
+            title: Text("Lang"),
+            subtitle: Text('Get.toNamed(AppRoutes.Lang)'),
+            onTap: () => Get.toNamed(AppRoutes.Lang),
+          ),
+          Divider(),
 
           // 样式
+          ListTile(
+            title: Text("Theme"),
+            subtitle: Text('Get.toNamed(AppRoutes.Theme)'),
+            onTap: () => Get.toNamed(AppRoutes.Theme),
+          ),
+          Divider(),
         ],
       ),
     );

@@ -25,4 +25,8 @@ abstract class AppRoutes {
   static const GetConnect = '/get_connect';
 
   static const NestedNavigator = '/nested_navigator';
+
+  static const Lang = '/lang';
+
+  static const Theme = '/theme';
 }

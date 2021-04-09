@@ -6,6 +6,7 @@ import 'package:getx_quick_start/pages/dependency_put_find/index.dart';
 import 'package:getx_quick_start/pages/getConnect_view/bindings.dart';
 import 'package:getx_quick_start/pages/getConnect_view/view.dart';
 import 'package:getx_quick_start/pages/home/index.dart';
+import 'package:getx_quick_start/pages/lang/index.dart';
 import 'package:getx_quick_start/pages/list_detail/index.dart';
 import 'package:getx_quick_start/pages/list/index.dart';
 import 'package:getx_quick_start/pages/login/index.dart';
@@ -19,6 +20,7 @@ import 'package:getx_quick_start/pages/state_getx/index.dart';
 import 'package:getx_quick_start/pages/state_obx/index.dart';
 import 'package:getx_quick_start/pages/state_valueBuilder/index.dart';
 import 'package:getx_quick_start/pages/state_workers/index.dart';
+import 'package:getx_quick_start/pages/theme/index.dart';
 
 part 'app_routes.dart';
 
@@ -82,6 +84,12 @@ class AppPages {
       page: () => NestedNavView(),
       binding: NestedBinding(),
     ),
+
+    // 多语言
+    GetPage(name: AppRoutes.Lang, page: () => LangView()),
+
+    // 主题
+    GetPage(name: AppRoutes.Theme, page: () => ThemeView()),
 
     // 其它
     GetPage(

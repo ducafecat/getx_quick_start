@@ -3,7 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'en_US.dart';
-import 'pt_BR.dart';
+import 'zh_Hans.dart';
+import 'zh_HK.dart';
+
+/*
+
+https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html
+https://www.ibabbleon.com/iOS-Language-Codes-ISO-639.html
+
+*/
 
 class TranslationService extends Translations {
   static Locale? get locale => Get.deviceLocale;
@@ -11,6 +19,7 @@ class TranslationService extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': en_US,
-        'pt_BR': pt_BR,
+        'zh_Hans': zh_Hans,
+        'zh_HK': zh_HK,
       };
 }
