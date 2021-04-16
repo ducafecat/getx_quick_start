@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-// ignore: must_be_immutable
 class StateObxView extends StatelessWidget {
   StateObxView({Key? key}) : super(key: key);
 
-  var count = 0.obs;
+  final count = 0.obs;
 
   @override
   Widget build(BuildContext context) {
