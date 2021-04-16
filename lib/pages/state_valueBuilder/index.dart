@@ -7,13 +7,10 @@ import 'package:get/get.dart';
   通过 updateFn 来更新数据
 */
 
-typedef ValueBuilderUpdateCallback<T> = void Function(T snapshot);
+// typedef ValueBuilderUpdateCallback<T> = void Function(T snapshot);
 
-// ignore: must_be_immutable
 class StateValueBuilderView extends StatelessWidget {
   StateValueBuilderView({Key? key}) : super(key: key);
-
-  int count = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,7 @@ class StateValueBuilderView extends StatelessWidget {
         children: [
           Center(
             child: ValueBuilder<int?>(
-              initialValue: count,
+              initialValue: 10,
               builder: (value, updateFn) {
                 return Column(
                   children: [
@@ -48,13 +45,6 @@ class StateValueBuilderView extends StatelessWidget {
               onUpdate: (value) => print("Value updated: $value"),
               onDispose: () => print("Widget unmounted"),
             ),
-          ),
-          Divider(),
-          ElevatedButton(
-            onPressed: () {
-              count++;
-            },
-            child: Text('add'),
           ),
         ],
       ),

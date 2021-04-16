@@ -8,11 +8,10 @@ import './controller.dart';
  * controller -> update
 */
 
-// ignore: must_be_immutable
 class StateGetxView extends StatelessWidget {
   StateGetxView({Key? key}) : super(key: key);
 
-  var controller = CountController();
+  final controller = CountController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class StateGetxView extends StatelessWidget {
               initState: (_) {},
               builder: (_) {
                 print("GetX - 1");
-                return Text('value -> ${_.count}');
+                return Text('value 1 -> ${_.count}');
               },
             ),
             GetX<CountController>(
@@ -36,7 +35,7 @@ class StateGetxView extends StatelessWidget {
               initState: (_) {},
               builder: (_) {
                 print("GetX - 2");
-                return Text('value -> ${_.count}');
+                return Text('value 2 -> ${_.count}');
               },
             ),
             Divider(),
@@ -49,12 +48,12 @@ class StateGetxView extends StatelessWidget {
                 print("GetX - 3");
                 return Column(
                   children: [
-                    Text('value -> ${_.count}'),
+                    Text('value 3 -> ${_.count}'),
                     ElevatedButton(
                       onPressed: () {
                         _.add();
                       },
-                      child: Text('GetX -> add'),
+                      child: Text('count1'),
                     )
                   ],
                 );
@@ -68,7 +67,7 @@ class StateGetxView extends StatelessWidget {
               initState: (_) {},
               builder: (_) {
                 print("GetX - 4");
-                return Text('value -> ${_.count2}');
+                return Text('value 4 -> ${_.count2}');
               },
             ),
             Divider(),
@@ -78,14 +77,14 @@ class StateGetxView extends StatelessWidget {
               onPressed: () {
                 controller.add();
               },
-              child: Text('add'),
+              child: Text('count1'),
             ),
 
             ElevatedButton(
               onPressed: () {
                 controller.add2();
               },
-              child: Text('add2 + update'),
+              child: Text('count2'),
             ),
           ],
         ),

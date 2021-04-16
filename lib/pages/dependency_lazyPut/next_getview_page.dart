@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'controller.dart';
 
-// ignore: must_be_immutable
 class NextPageView extends GetView<CountController> {
   NextPageView({Key? key}) : super(key: key);
 

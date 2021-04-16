@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import './controller.dart';
 
-// ignore: must_be_immutable
 class NextPageView extends StatelessWidget {
   NextPageView({Key? key}) : super(key: key);
 
-  var controller = Get.find<CountController>();
+  final controller = Get.find<CountController>();
 
   @override
   Widget build(BuildContext context) {

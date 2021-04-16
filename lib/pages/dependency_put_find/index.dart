@@ -4,11 +4,10 @@ import 'package:get/get.dart';
 import './controller.dart';
 import './next_page.dart';
 
-// ignore: must_be_immutable
 class StateDependencyPutFindView extends StatelessWidget {
   StateDependencyPutFindView({Key? key}) : super(key: key);
 
-  var controller = Get.put<CountController>(CountController());
+  final controller = Get.put<CountController>(CountController());
 
   @override
   Widget build(BuildContext context) {

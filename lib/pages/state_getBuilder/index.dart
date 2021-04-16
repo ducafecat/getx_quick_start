@@ -8,11 +8,10 @@ import './controller.dart';
  * controller -> update
 */
 
-// ignore: must_be_immutable
 class StateGetBuilderView extends StatelessWidget {
   StateGetBuilderView({Key? key}) : super(key: key);
 
-  var controller = CountController();
+  final controller = CountController();
 
   @override
   Widget build(BuildContext context) {

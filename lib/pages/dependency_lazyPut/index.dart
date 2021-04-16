@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import './controller.dart';
 import 'next_getview_page.dart';
 
-// ignore: must_be_immutable
 class StateDependencyLazyPutView extends StatelessWidget {
   StateDependencyLazyPutView({Key? key}) : super(key: key);
 
