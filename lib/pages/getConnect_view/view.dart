@@ -8,7 +8,7 @@ import 'controller.dart';
 class NewsView extends GetView<NewsController> {
   NewsView({Key? key}) : super(key: key);
 
-  _buildItem(NewsPageListResponseEntity? state) {
+  _buildListView(NewsPageListResponseEntity? state) {
     return ListView.separated(
       itemCount: state != null ? state.items.length : 0,
       itemBuilder: (context, index) {
@@ -32,7 +32,7 @@ class NewsView extends GetView<NewsController> {
         title: Text("GetConnect Page"),
       ),
       body: controller.obx(
-        (state) => _buildItem(state),
+        (state) => _buildListView(state),
         onEmpty: Text("onEmpty"),
         onLoading: Center(
           child: Column(
