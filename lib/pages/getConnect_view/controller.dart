@@ -5,7 +5,8 @@ import 'provider.dart';
 
 class NewsController extends GetxController
     with StateMixin<NewsPageListResponseEntity> {
-  final provider = Get.find<NewsProvider>();
+  final NewsProvider provider;
+  NewsController({required this.provider});
 
   // 拉取新闻列表
   Future<void> getNewsPageList() async {
