@@ -1,17 +1,17 @@
 /// 新闻分页 response
 class NewsPageListResponseEntity {
-  int counts;
-  int pagesize;
-  int pages;
-  int page;
-  List<NewsItem> items;
+  int? counts;
+  int? pagesize;
+  int? pages;
+  int? page;
+  List<NewsItem>? items;
 
   NewsPageListResponseEntity({
-    required this.counts,
-    required this.pagesize,
-    required this.pages,
-    required this.page,
-    required this.items,
+    this.counts,
+    this.pagesize,
+    this.pages,
+    this.page,
+    this.items,
   });
 
   factory NewsPageListResponseEntity.fromJson(Map<String, dynamic> json) =>
@@ -29,7 +29,9 @@ class NewsPageListResponseEntity {
         "pagesize": pagesize,
         "pages": pages,
         "page": page,
-        "items": List<dynamic>.from(items.map((x) => x.toJson())),
+        "items": items != null
+            ? List<dynamic>.from(items!.map((x) => x.toJson()))
+            : [],
       };
 }
 

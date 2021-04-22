@@ -202,6 +202,14 @@ class HomeView extends StatelessWidget {
           ),
           Divider(),
 
+          // 控制器 + dio
+          ListTile(
+            title: Text("GetControllerDio"),
+            subtitle: Text('Get.toNamed(AppRoutes.GetControllerDio)'),
+            onTap: () => Get.toNamed(AppRoutes.GetControllerDio),
+          ),
+          Divider(),
+
           // 多语言
           ListTile(
             title: Text("Lang"),

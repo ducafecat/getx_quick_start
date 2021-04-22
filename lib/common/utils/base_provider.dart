@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
+import 'package:getx_quick_start/common/values/server.dart';
 
 class BaseProvider extends GetConnect {
   @override
   void onInit() {
-    httpClient.baseUrl = 'https://yapi.ducafecat.tech/mock/11';
+    httpClient.baseUrl = SERVER_API_URL;
 
     // 请求拦截
     httpClient.addRequestModifier<void>((request) {

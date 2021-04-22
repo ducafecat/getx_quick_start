@@ -10,9 +10,9 @@ class NewsStateMixinView extends GetView<NewsStateMixinController> {
 
   _buildListView(NewsPageListResponseEntity? state) {
     return ListView.separated(
-      itemCount: state != null ? state.items.length : 0,
+      itemCount: state != null ? state.items!.length : 0,
       itemBuilder: (context, index) {
-        final NewsItem item = state!.items[index];
+        final NewsItem item = state!.items![index];
         return ListTile(
           onTap: () => null,
           title: Text(item.title),
@@ -37,7 +37,7 @@ class NewsStateMixinView extends GetView<NewsStateMixinController> {
         onLoading: Center(
           child: Column(
             children: [
-              Text("onLoading"),
+              Text("没有数据"),
               ElevatedButton(
                 onPressed: () {
                   controller.getNewsPageList();
