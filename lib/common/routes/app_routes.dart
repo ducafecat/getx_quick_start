@@ -23,6 +23,7 @@ abstract class AppRoutes {
   static const Service = '/service';
 
   static const GetConnect = '/get_connect';
+  static const GetConnectStateMixin = '/get_connect_state_mixin';
 
   static const NestedNavigator = '/nested_navigator';
 

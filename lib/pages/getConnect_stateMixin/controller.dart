@@ -3,10 +3,10 @@ import 'package:getx_quick_start/common/entity/news.dart';
 
 import 'provider.dart';
 
-class NewsController extends GetxController
+class NewsStateMixinController extends GetxController
     with StateMixin<NewsPageListResponseEntity> {
-  final NewsProvider provider;
-  NewsController({required this.provider});
+  final NewsStateMixinProvider provider;
+  NewsStateMixinController({required this.provider});
 
   // 拉取新闻列表
   Future<void> getNewsPageList() async {
