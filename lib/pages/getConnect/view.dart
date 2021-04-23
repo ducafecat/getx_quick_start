@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:getx_quick_start/common/entity/news.dart';
 import 'controller.dart';
 
-// ignore: must_be_immutable
 class NewsView extends GetView<NewsController> {
   NewsView({Key? key}) : super(key: key);
 
