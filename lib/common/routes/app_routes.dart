@@ -8,6 +8,7 @@ abstract class AppRoutes {
   static const Detail_ID = '/detail/:id';
   static const NotFound = '/notfound';
   static const My = '/my';
+  static const Count = '/count';
 
   static const State = '/obx';
   static const Obx = '/obx';

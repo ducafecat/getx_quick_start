@@ -1,5 +1,16 @@
 # getx_quick_start
 
+## 参考
+
+- getx pub
+  https://github.com/jonataslaw/getx
+
+- getx cli
+  https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets
+
+- getx pattern
+  https://kauemurakami.github.io/getx_pattern/
+
 ## 全面启用 getx4 + null-safety 空安全
 
 ## 前言

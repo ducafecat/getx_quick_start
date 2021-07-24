@@ -181,6 +181,14 @@ class HomeView extends StatelessWidget {
           ),
           Divider(),
 
+          // Count
+          ListTile(
+            title: Text("Count"),
+            subtitle: Text('Get.toNamed(AppRoutes.Count)'),
+            onTap: () => Get.toNamed(AppRoutes.Count),
+          ),
+          Divider(),
+
           // GetxService
           ListTile(
             title: Text("Service"),

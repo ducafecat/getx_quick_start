@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:getx_quick_start/common/middleware/router_auth.dart';
+import 'package:getx_quick_start/pages/counter/bindings.dart';
+import 'package:getx_quick_start/pages/counter/index.dart';
 import 'package:getx_quick_start/pages/dependency_lazyPut/bindings.dart';
 import 'package:getx_quick_start/pages/dependency_lazyPut/index.dart';
 import 'package:getx_quick_start/pages/dependency_put_find/index.dart';
@@ -104,6 +106,13 @@ class AppPages {
 
     // 主题
     GetPage(name: AppRoutes.Theme, page: () => ThemeView()),
+
+    // Count
+    GetPage(
+      name: AppRoutes.Count,
+      page: () => CountPage(),
+      binding: CountBinding(),
+    ),
 
     // 其它
     GetPage(
