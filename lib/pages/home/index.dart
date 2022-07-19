@@ -35,7 +35,7 @@ class HomeView extends StatelessWidget {
           ListTile(
             title: Text("导航-类对象"),
             subtitle: Text("Get.to(DetailView())"),
-            onTap: () => Get.to(DetailView()),
+            onTap: () => Get..to(DetailView()),
           ),
           ListTile(
             title: Text("导航-清除上一个"),

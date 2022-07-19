@@ -21,7 +21,7 @@ class LangView extends StatelessWidget {
             Text(
               "login -> " +
                   'login'.trParams(
-                      {'name': 'ducafecat', 'email': 'ducafecat@gmail.com'})!,
+                      {'name': 'ducafecat', 'email': 'ducafecat@gmail.com'}),
               style: TextStyle(fontSize: 24),
             ),
             Divider(),
